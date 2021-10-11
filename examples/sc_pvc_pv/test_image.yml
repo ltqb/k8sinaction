@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pods-test-image-jiale
+spec:
+  nodeName: tess-node-s4j5n-tess94.stratus.rno.ebay.com
+  containers:
+    - command:
+        - sleep
+        - "3600"
+      image: ecr.vip.ebayc3.com/hangyin/pykrylov-pipeline-yh:v2
+      name: pods-simple-container

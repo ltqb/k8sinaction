@@ -1,12 +1,12 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: retain-local-claim
+  name: test-jiale-01
 spec:
   accessModes:
   - ReadWriteOnce
   resources:
     requests:
-      storage: 1Ki 
-  storageClassName: retain-policy
+      storage: 1Gi 
+  storageClassName: netapp-nfs 
 
