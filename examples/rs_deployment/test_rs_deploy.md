@@ -33,4 +33,9 @@ deployment.apps/deployments-busybox-deployment-deployment rolled back
 [jialesun:...tion/examples/rs_deployment]$ minikube kubectl -- get deploy -o wide 
 NAME                                        READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES   SELECTOR
 deployments-busybox-deployment-deployment   2/2     2            2           11m   busybox      nginx    app=deployments-simple-deployment-app
+
+[jialesun:...tion/examples/rs_deployment]$ minikube kubectl -- get rs -A
+NAMESPACE       NAME                                                   DESIRED   CURRENT   READY   AGE
+default         deployments-busybox-deployment-deployment-6d6f55b4b    0         0         0       29m
+default         deployments-busybox-deployment-deployment-869df7f76d   2         2         2       25m
 ```
